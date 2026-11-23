@@ -1,0 +1,77 @@
+{
+  "title": "园区试车预留电力的分时取数和代办",
+  "sources": [
+    "/wires.csv",
+    "/room.json",
+    "/trials.json",
+    "/manual-bookings.csv"
+  ],
+  "forms": [
+    {
+      "path": "/reserve",
+      "title": "试车短时增容柜台",
+      "fields": {
+        "plant": "厂房",
+        "start": "开始分钟",
+        "request": "请求号"
+      },
+      "choices": [
+        [
+          [
+            "A1",
+            "26",
+            "T1"
+          ],
+          "工单 W39"
+        ],
+        [
+          [
+            "A2",
+            "28",
+            "T3"
+          ],
+          "工单 W40"
+        ]
+      ]
+    },
+    {
+      "path": "/desk",
+      "title": "电力柜台回读",
+      "fields": {
+        "ticket": "工单",
+        "shift": "班次"
+      },
+      "choices": [
+        [
+          [
+            "W39",
+            "early"
+          ],
+          "26–30 5 kW 已确认；30–36 待调度"
+        ],
+        [
+          [
+            "W39",
+            "late"
+          ],
+          "30–36 收回；26–30 撤销已受理"
+        ],
+        [
+          [
+            "W40",
+            "late"
+          ],
+          "28–30 3 kW 已确认；30–35 7 kW 已确认"
+        ],
+        [
+          [
+            "R12",
+            "late"
+          ],
+          "物业预约 M6 作废，柜台未登记占用"
+        ]
+      ]
+    }
+  ],
+  "range_sources": []
+}

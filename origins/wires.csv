@@ -1,0 +1,4 @@
+plant,starts,ends,unit
+A1,0,60,F1
+A2,0,25,F2
+A2,25,60,F1
